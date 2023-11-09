@@ -1,0 +1,36 @@
+/******************************************************************/
+/*                                                                */
+/*                           NavBar                               */
+/*                                                                */
+/******************************************************************/
+
+nav{
+    margin-top: 3vh;
+    text-align: right;  
+    margin-bottom: 15vh;  
+}
+
+.navlink{
+    text-decoration: none;
+    color: aquamarine;
+    background-color: cadetblue;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 13px;
+}
+
+.navlink:hover{
+    color: cadetblue;
+    background-color: aquamarine;
+}
+
+/******************************************************************/
+/*                                                                */
+/*                             Body                               */
+/*                                                                */
+/******************************************************************/
+
+h1{
+    text-align: center;
+    text-decoration: double;
+}
