@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Insertion Produit - PRIEZ LEROUX</title>
+</head>
+<body>
+    <nav>
+        <a href="./accueil.html" class="navlink Myshadow">Ajout Données</a>
+        <a href="./recherche.html" class="navlink Myshadow">Recherche Données</a>           
+    </nav>
+
+    <h1>SAISIR UN NOUVEL ARTICLE</h1>
+
+    <form th:action="@{/form}" th:object="${article}" method="post" class="formInsert">
+        <div class="col-3 divForm">
+            <label for="nom" class="col-6 tA_Left">Nom :</label>
+            <input type="text" id="nom" name="nom" th:field="*{nom}" />
+        </div>
+        <div class="col-9 divForm">
+            <label for="prix" class="col-6 tA_Left">Prix :</label>
+            <input type="text" id="prix" name="prix" th:field="*{prix}" />
+        </div>
+        <div class="col-12 pt-3">
+            <button type="submit" class="Myshadow">ACCEPTER</button>
+        </div>
+    </form>
+</body>
+</html>
+

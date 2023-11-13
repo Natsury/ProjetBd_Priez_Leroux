@@ -1,0 +1,87 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+    text-align: center;
+}
+/******************************************************************/
+/*                                                                */
+/*                           NavBar                               */
+/*                                                                */
+/******************************************************************/
+
+nav{
+    margin-top: 3vh;
+    text-align: right;  
+    margin-bottom: 15vh;  
+}
+
+.navlink{
+    text-decoration: none;
+    color: aquamarine;
+    background-color: cadetblue;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 13px;
+}
+
+.navlink:hover{
+    color: cadetblue;
+    background-color: aquamarine;
+    text-decoration: none;
+}
+
+/******************************************************************/
+/*                                                                */
+/*                             Body                               */
+/*                                                                */
+/******************************************************************/
+
+h1{
+    text-align: center;
+    margin-bottom: 6vh !important;
+}
+
+.formInsert{
+    background-color: rgba(110, 110, 129, 0.281);
+    border-radius: 13px;
+    margin-left: 25vw;
+    margin-right: 25vw; 
+    padding-bottom: 2vh;   
+    padding-top: 2vh;
+}
+
+form{
+    text-align: center;
+}
+
+.tA_Left{
+    text-align: left;
+}
+
+button{
+    background-color: cadetblue;
+    border-radius: 13px !important;
+    border: none;
+    color: aquamarine;
+    padding: 5px 10px;
+}
+
+button:hover{
+    background-color: aquamarine;
+    color: cadetblue;   
+}
+
+.Myshadow{
+    box-shadow: rgba(95, 158, 160, 0.651) 1px 0 10px !important;
+}
+
+.divForm{
+    background-color: rgba(182, 182, 194, 0.281);
+    border-radius: 13px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    text-align: left;
+    margin-left: 40px;
+}
