@@ -1,5 +1,9 @@
 package program.entities;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "articles")      // Assignation des documents créés à partir des objets Article à la Collection articles de MongoDB
 public class Article {
 
     private String nom;

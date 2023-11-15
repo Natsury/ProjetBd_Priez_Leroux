@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication                                                      // Déclaration app Spring
-//@ComponentScan(basePackages = {"program", "controllers", "entities"})     // Scan custom (import requis)
+//@ComponentScan(basePackages = {"program", "controllers", "entities", "repositories", "services"})     // Scan custom (import requis)
 public class MainApplication {
 
     public static void main(String[] args) {
