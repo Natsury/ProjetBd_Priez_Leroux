@@ -12,7 +12,7 @@ import program.services.ArticleService;
 
 // Le controller contient toutes les fonctions de la page à l'url /form
 @Controller                 // Signaler controller
-@RequestMapping("/accueil")    // Assignation URL
+@RequestMapping("/")    // Assignation URL
 public class ArticleController {
 
     private final ArticleService articleService;
@@ -36,9 +36,6 @@ public class ArticleController {
         System.out.println("Quantité stock : " + article.getStock());
         articleService.enregistrerNouvelArticle(article);
 
-        return "redirect:/accueil";
+        return "redirect:/";
     }
-
-
-
 }

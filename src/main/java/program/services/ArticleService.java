@@ -29,5 +29,4 @@ public class ArticleService {
     public List<Article> findByNomContainingIgnoreCase(String nom) {
         return articleRepository.findByNomContainingIgnoreCase(nom);
     }
-
 }

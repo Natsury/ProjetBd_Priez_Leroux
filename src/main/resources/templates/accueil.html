@@ -9,29 +9,37 @@
 </head>
 <body>
     <nav>
-        <a th:href="@{/accueil}" class="navlink Myshadow">Ajout Données</a>
+        <a th:href="@{/}" class="navlink Myshadow">Ajout Données</a>
         <a th:href="@{/recherche}" class="navlink Myshadow">Recherche Données</a>
     </nav>
 
-    <h1>SAISIR UN NOUVEL ARTICLE</h1>
+    <div class="popUp">
+        <p>ACTION RÉUSSITE</p>
+        <button type="button" onclick="ratioFenetre()">OK MEC</button>
+    </div>
 
-    <form th:action="@{/accueil}" th:object="${article}" method="post" class="formInsert">
-        <div class="col-3 divForm">
-            <label for="nom" class="col-6 tA_Left">Nom :</label>
-            <input type="text" id="nom" name="nom" th:field="*{nom}" />
-        </div>
-        <div class="col-9 divForm">
-            <label for="prix" class="col-6 tA_Left">Prix :</label>
-            <input type="text" id="prix" name="prix" th:field="*{prix}" />
-        </div>
-        <div class="col-9 divForm">
-            <label for="stock" class="col-6 tA_Left">Stock :</label>
-            <input type="text" id="stock" name="stock" th:field="*{stock}" />
-        </div>
-        <div class="col-12 pt-3">
-            <button type="submit" class="Myshadow">ACCEPTER</button>
-        </div>
-    </form>
+    <h1>SAISIR UN NOUVEL ARTICLE</h1>
+    <div class="ParentForm">
+        <form th:action="@{/}" th:object="${article}" method="post" class="formInsert row">
+            <div class="col-3 divForm">
+                <label for="nom" class="col-12 tA_Left">Nom :</label>
+                <input type="text" class="col-12" id="nom" name="nom" th:field="*{nom}" />
+            </div>
+            <div class="col-3 divForm">
+                <label for="prix" class="col-12 tA_Left">Prix :</label>
+                <input type="text" class="col-12" id="prix" name="prix" th:field="*{prix}" />
+            </div>
+            <div class="col-3 divForm">
+                <label for="stock" class="col-12 tA_Left">Stock :</label>
+                <input type="text" class="col-12" id="stock" name="stock" th:field="*{stock}" />
+            </div>
+            <div class="col-4 btnClass">
+                <button type="submit" class="Myshadow">ACCEPTER</button>
+            </div>
+        </form>
+    </div>
+
+<script src="confirmation-action.js"></script>
 </body>
 </html>
 

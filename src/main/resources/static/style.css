@@ -46,10 +46,10 @@ h1{
 .formInsert{
     background-color: rgba(110, 110, 129, 0.281);
     border-radius: 13px;
-    margin-left: 25vw;
-    margin-right: 25vw; 
+    justify-content: center;
     padding-bottom: 2vh;   
     padding-top: 2vh;
+    width: 70vw;
 }
 
 form{
@@ -80,8 +80,20 @@ button:hover{
 .divForm{
     background-color: rgba(182, 182, 194, 0.281);
     border-radius: 13px;
+    margin: auto;
     padding-bottom: 10px;
     padding-top: 5px;
     text-align: left;
-    margin-left: 40px;
+}
+
+.ParentForm{
+    display:flex;
+    justify-content: center;
+}
+
+.btnClass{
+    margin: 2vh auto 0 auto;}
+
+label{
+    padding: 0 !important;
 }
