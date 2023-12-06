@@ -31,6 +31,7 @@ public class ArticleController {
     @PostMapping            // Fonction post
     public String traitementForm(@ModelAttribute("article") Article article, Model model) {
         // Traitement
+
         System.out.println("Nom : " + article.getNom());
         System.out.println("Prix : " + article.getPrix());
         System.out.println("Quantité stock : " + article.getStock());

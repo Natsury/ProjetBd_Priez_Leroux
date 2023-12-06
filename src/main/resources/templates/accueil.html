@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,600;1,800&display=swap" rel="stylesheet"> 
     <title>Insertion Produit - PRIEZ LEROUX</title>
 </head>
 <body>
@@ -13,33 +17,35 @@
         <a th:href="@{/recherche}" class="navlink Myshadow">Recherche Données</a>
     </nav>
 
-    <div class="popUp">
-        <p>ACTION RÉUSSITE</p>
-        <button type="button" onclick="ratioFenetre()">OK MEC</button>
-    </div>
-
     <h1>SAISIR UN NOUVEL ARTICLE</h1>
     <div class="ParentForm">
         <form th:action="@{/}" th:object="${article}" method="post" class="formInsert row">
             <div class="col-3 divForm">
                 <label for="nom" class="col-12 tA_Left">Nom :</label>
-                <input type="text" class="col-12" id="nom" name="nom" th:field="*{nom}" />
+                <input type="text" class="col-12" id="nom" name="nom" th:field="*{nom}" placeholder="Entrez le nom du produit"/>
             </div>
             <div class="col-3 divForm">
                 <label for="prix" class="col-12 tA_Left">Prix :</label>
-                <input type="text" class="col-12" id="prix" name="prix" th:field="*{prix}" />
+                <input type="text" class="col-12" id="prix" name="prix" value="" th:field="*{prix}" placeholder="Entez le prix du produit"  />
             </div>
             <div class="col-3 divForm">
                 <label for="stock" class="col-12 tA_Left">Stock :</label>
-                <input type="text" class="col-12" id="stock" name="stock" th:field="*{stock}" />
+                <input type="text" class="col-12" id="stock" name="stock" value="" th:field="*{stock}" placeholder="Entrez le nombre de produit en stock" />
             </div>
             <div class="col-4 btnClass">
-                <button type="submit" class="Myshadow">ACCEPTER</button>
+                <button type="button" class="Myshadow" onclick="confirmFenetre()">ACCEPTER</button>
+            </div>
+            <div class="popUp" id="popUp">
+                <div  class="elemPopUp">
+                    <p>PRODUIT ENREGISTRÉ</p>
+                    <button type="submit" onclick="confirmFenetre()">OK MEC</button>
+                </div>
             </div>
         </form>
     </div>
 
 <script src="confirmation-action.js"></script>
+<script src="clearInput-script.js"></script>
 </body>
 </html>
 

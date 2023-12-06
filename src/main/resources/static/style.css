@@ -4,6 +4,7 @@ html{
 
 body{
     text-align: center;
+    background-color: #a7e8e8 !important;
 }
 /******************************************************************/
 /*                                                                */
@@ -12,9 +13,10 @@ body{
 /******************************************************************/
 
 nav{
-    margin-top: 3vh;
-    text-align: right;  
-    margin-bottom: 15vh;  
+    padding-top: 3vh;
+    text-align: right;
+    padding-bottom: 3vh;
+    margin-bottom: 11.5vh;
 }
 
 .navlink{
@@ -41,15 +43,24 @@ nav{
 h1{
     text-align: center;
     margin-bottom: 6vh !important;
+    font-family: 'Tourney', sans-serif;
+    font-size: 92px !important;
+    color: #014d8e;
+}
+
+label{
+    font-size: 30px;
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 800
 }
 
 .formInsert{
-    background-color: rgba(110, 110, 129, 0.281);
-    border-radius: 13px;
-    justify-content: center;
-    padding-bottom: 2vh;   
-    padding-top: 2vh;
-    width: 70vw;
+    background-color: #5ab4b991;
+  border-radius: 13px;
+  justify-content: center;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  width: 70vw;
 }
 
 form{
@@ -68,22 +79,29 @@ button{
     padding: 5px 10px;
 }
 
+button, a{
+    font-size: 24px !important;
+    font-family: 'Alumni Sans', sans-serif !important;
+    font-weight: 600;
+}
+
 button:hover{
     background-color: aquamarine;
     color: cadetblue;   
 }
 
 .Myshadow{
-    box-shadow: rgba(95, 158, 160, 0.651) 1px 0 10px !important;
+    box-shadow: 0 0 10px aliceblue !important;
 }
 
 .divForm{
-    background-color: rgba(182, 182, 194, 0.281);
+    background-color: #a7e8e8;
     border-radius: 13px;
     margin: auto;
     padding-bottom: 10px;
     padding-top: 5px;
     text-align: left;
+    box-shadow: 0 0 10px aliceblue;
 }
 
 .ParentForm{
@@ -96,4 +114,37 @@ button:hover{
 
 label{
     padding: 0 !important;
+}
+
+/******************************************************************/
+/*                                                                */
+/*                             Body                               */
+/*                                                                */
+/******************************************************************/
+
+.popUp{
+    border-radius: 100px;
+    width: 480PX;
+    height: 200px;
+    box-shadow: 
+    0 0 10px #cdcdd4,
+    0 0 10px black;
+    
+    background-color: #d6d6db;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.popUp-open{
+    transform: translate(-50%,-100%) scale(1);
+    visibility: visible;
+    top: 50%;
+}
+
+.elemPopUp{
+    margin: 12%;
 }
