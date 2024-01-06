@@ -18,11 +18,11 @@
     <form th:action="@{/accueil}" th:object="${article}" method="post" class="formInsert">
         <div class="col-3 divForm">
             <label for="nom" class="col-6 tA_Left">Nom :</label>
-            <input type="text" id="nom" name="nom" th:field="*{nom}" />
+            <input type="text" id="nom" name="nom" th:field="*{nom}" value="caca"/>
         </div>
         <div class="col-9 divForm">
             <label for="prix" class="col-6 tA_Left">Prix :</label>
-            <input type="text" id="prix" name="prix" th:field="*{prix}" />
+            <input type="text" id="prix" name="prix" th:field="*{prix}" value="test"/>
         </div>
         <div class="col-9 divForm">
             <label for="stock" class="col-6 tA_Left">Stock :</label>
