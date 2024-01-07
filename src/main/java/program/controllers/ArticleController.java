@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import program.services.ArticleService;
 
-// Le controller contient toutes les fonctions de la page à l'url /form
+// Le controller contient toutes les fonctions de la page à l'url /accueil
 @Controller                 // Signaler controller
 @RequestMapping("/")    // Assignation URL
 public class ArticleController {
@@ -30,11 +30,11 @@ public class ArticleController {
 
     @PostMapping            // Fonction post
     public String traitementForm(@ModelAttribute("article") Article article, Model model) {
-        // Traitement
-
+        // Affichage Debug
         System.out.println("Nom : " + article.getNom());
         System.out.println("Prix : " + article.getPrix());
         System.out.println("Quantité stock : " + article.getStock());
+        // Enregistrer dans Mongo
         articleService.enregistrerNouvelArticle(article);
 
         return "redirect:/";
