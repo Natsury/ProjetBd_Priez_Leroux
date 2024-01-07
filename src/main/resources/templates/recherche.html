@@ -20,9 +20,9 @@
     <div class="card divContainer">
         <h1>RECHERCHE DE PRODUITS</h1>
 
-        <form th:action="@{/recherche}" th:object="${recherche}" method="post" class="formInsert">
+        <form class="formInsert formSearch" th:action="@{/recherche}" th:object="${recherche}" method="post" >
             <div class="col-3 divForm">
-                <label for="nom" class="col-6 tA_Left">Recherche par nom :</label>
+                <label for="nom" class=" tA_Left">Recherche par nom :</label>
                 <input type="text" id="nom" name="nom" th:field="*{nom}" />
             </div>
             <div class="col-12 pt-3">
