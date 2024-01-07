@@ -3,8 +3,11 @@ html{
 }
 
 body{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /*
     background-color: #a7e8e8 !important;
+    */
 }
 /******************************************************************/
 /*                                                                */
@@ -17,6 +20,8 @@ nav{
     text-align: right;
     padding-bottom: 3vh;
     margin-bottom: 11.5vh;
+    background-color: #a1d4d7;
+    box-shadow: 0 0 3px 2px #6e9bc4;
 }
 
 .navlink{
@@ -36,7 +41,7 @@ nav{
 
 /******************************************************************/
 /*                                                                */
-/*                             Body                               */
+/*                             Main                               */
 /*                                                                */
 /******************************************************************/
 
@@ -47,6 +52,14 @@ h1{
     font-size: 92px !important;
     color: #014d8e;
 }
+
+.divContainer{
+    width: 80vw;
+    align-self: center;
+    padding-bottom: 40px;
+    background-color: #c7e1e1 !important;
+    margin-top: 7vh;
+    box-shadow: 2px 2px 3px 2px #a48585 !important;}
 
 label{
     font-size: 30px;
@@ -90,18 +103,13 @@ button:hover{
     color: cadetblue;   
 }
 
-.Myshadow{
-    box-shadow: 0 0 10px aliceblue !important;
-}
-
 .divForm{
-    background-color: #a7e8e8;
+    background-color: #a7e8e8;      
     border-radius: 13px;
     margin: auto;
     padding-bottom: 10px;
     padding-top: 5px;
     text-align: left;
-    box-shadow: 0 0 10px aliceblue;
 }
 
 .ParentForm{
@@ -110,15 +118,25 @@ button:hover{
 }
 
 .btnClass{
-    margin: 2vh auto 0 auto;}
+    margin: 2vh auto 0 auto;
+}
+
 
 label{
     padding: 0 !important;
 }
 
+.errorLabel{
+    display: none;
+}
+
+.errorLabel-font{
+    color: #f00;
+}
+
 /******************************************************************/
 /*                                                                */
-/*                             Body                               */
+/*                         Main PopUp                             */
 /*                                                                */
 /******************************************************************/
 
@@ -147,4 +165,24 @@ label{
 
 .elemPopUp{
     margin: 12%;
+}
+
+/******************************************************************/
+/*                                                                */
+/*                         Main PopUp                             */
+/*                                                                */
+/******************************************************************/
+
+
+.table thead th, th, td{
+    border-bottom: 2px solid #89c7ca !important;
+}
+
+.table thead th{
+    border-top: 1px solid #89c7ca !important;
+}
+
+.divContainer h2{
+    text-align: center;
+    margin: 20px auto;
 }

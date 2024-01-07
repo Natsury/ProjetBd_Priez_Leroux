@@ -13,39 +13,43 @@
 </head>
 <body>
     <nav>
-        <a th:href="@{/}" class="navlink Myshadow">Ajout Données</a>
-        <a th:href="@{/recherche}" class="navlink Myshadow">Recherche Données</a>
+        <a th:href="@{/}" class="navlink">Ajout Données</a>
+        <a th:href="@{/recherche}" class="navlink">Recherche Données</a>
     </nav>
-
-    <h1>SAISIR UN NOUVEL ARTICLE</h1>
-    <div class="ParentForm">
-        <form th:action="@{/}" th:object="${article}" method="post" class="formInsert row">
-            <div class="col-3 divForm">
-                <label for="nom" class="col-12 tA_Left">Nom :</label>
-                <input type="text" class="col-12" id="nom" name="nom" th:field="*{nom}" placeholder="Entrez le nom du produit"/>
-            </div>
-            <div class="col-3 divForm">
-                <label for="prix" class="col-12 tA_Left">Prix :</label>
-                <input type="text" class="col-12" id="prix" name="prix" value="" th:field="*{prix}" placeholder="Entez le prix du produit"  />
-            </div>
-            <div class="col-3 divForm">
-                <label for="stock" class="col-12 tA_Left">Stock :</label>
-                <input type="text" class="col-12" id="stock" name="stock" value="" th:field="*{stock}" placeholder="Entrez le nombre de produit en stock" />
-            </div>
-            <div class="col-4 btnClass">
-                <button type="button" class="Myshadow" onclick="confirmFenetre()">ACCEPTER</button>
-            </div>
-            <div class="popUp" id="popUp">
-                <div  class="elemPopUp">
-                    <p>PRODUIT ENREGISTRÉ</p>
-                    <button type="submit" onclick="confirmFenetre()">OK MEC</button>
+    <div class="card divContainer">
+        <h1>SAISIR UN NOUVEL ARTICLE</h1>
+        <div class="ParentForm">
+            <form th:action="@{/}" th:object="${article}" method="post" class="formInsert row">
+                <div class="col-3 divForm" id="divNom">
+                    <label class="errorLabel errorLabel-font" id="lblErrorNom">Entrer un nom valide</label>
+                    <label for="nom" class="col-12 tA_Left">Nom :</label>
+                    <input type="text" class="col-12" id="nom" name="nom" th:field="*{nom}" placeholder="Entrez le nom du produit"/>
                 </div>
-            </div>
-        </form>
+                <div class="col-3 divForm" id="divPrix">
+                    <label class="errorLabel errorLabel-font" id="lblErrorPrix">Entrer un prix valide</label>
+                    <label for="prix" class="col-12 tA_Left">Prix :</label>
+                    <input type="text" class="col-12" id="prix" name="prix" th:field="*{prix}" placeholder="Entez le prix du produit"/>
+                </div>
+                <div class="col-3 divForm" id="divStock">
+                    <label class="errorLabel errorLabel-font" id="lblErrorStock">Entrer un stock valide</label>
+                    <label for="stock" class="col-12 tA_Left">Stock :</label>
+                    <input type="text" class="col-12" id="stock" name="stock" th:field="*{stock}" placeholder="Entrez la quantité de produit en stock"/>
+                </div>
+                <div class="col-4 btnClass">
+                    <button type="button" onclick="isEmpty()">ACCEPTER</button>
+                </div>
+                <div class="popUp" id="popUp">
+                    <div  class="elemPopUp">
+                       <p>PRODUIT ENREGISTRÉ</p>
+                       <button type="submit" onclick="confirmFenetre()">OK MEC</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-
 <script src="confirmation-action.js"></script>
 <script src="clearInput-script.js"></script>
+<script src="checkInput.js"></script>
 </body>
 </html>
 
