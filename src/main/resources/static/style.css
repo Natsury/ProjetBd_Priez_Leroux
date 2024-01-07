@@ -109,7 +109,6 @@ button:hover{
     margin: auto;
     padding-bottom: 10px;
     padding-top: 5px;
-    text-align: left;
 }
 
 .ParentForm{
@@ -190,5 +189,4 @@ label{
 
 .formSearch{
     align-self: center;
-    
 }
